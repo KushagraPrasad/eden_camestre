@@ -491,6 +491,14 @@ section {
   background: var(--mist);
 }
 
+.gallery-view p {
+  margin: 0;
+  padding: 14px 18px 16px;
+  background: var(--white);
+  color: var(--forest);
+  font-weight: 800;
+}
+
 .gallery-view.is-contain img {
   object-fit: contain;
   padding: clamp(18px, 3vw, 34px);
@@ -508,6 +516,7 @@ section {
 }
 
 .gallery-strip button {
+  position: relative;
   height: clamp(104px, 10vw, 138px);
   padding: 0;
   border: 3px solid transparent;
@@ -526,6 +535,21 @@ section {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.gallery-strip span {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  display: block;
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: rgba(16, 42, 29, 0.78);
+  color: var(--white);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-align: center;
 }
 
 .map-section {
@@ -635,6 +659,23 @@ section {
   font-weight: 800;
 }
 
+.mobile-whatsapp {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  z-index: 30;
+  display: none;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #25d366;
+  color: #0b2515;
+  font-weight: 900;
+  box-shadow: 0 16px 34px rgba(16, 42, 29, 0.28);
+}
+
 @media (max-width: 980px) {
   .site-header {
     grid-template-columns: auto auto;
@@ -708,13 +749,40 @@ section {
 }
 
 @media (max-width: 640px) {
+  body {
+    padding-bottom: 76px;
+  }
+
   .hero {
-    min-height: 100vh;
-    padding-top: 128px;
+    min-height: auto;
+    padding-top: 112px;
+    padding-bottom: 34px;
+    gap: 26px;
   }
 
   .brand {
     width: 96px;
+  }
+
+  h1 {
+    font-size: clamp(3.25rem, 18vw, 4.85rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+  .hero-copy {
+    font-size: 1rem;
+  }
+
+  .hero-panel div {
+    min-height: 88px;
+    padding: 18px;
+  }
+
+  .hero-panel strong {
+    font-size: 2.8rem;
   }
 
   .hero-actions,
@@ -726,16 +794,44 @@ section {
     width: 100%;
   }
 
-  .amenity-grid,
   .gallery-strip {
-    grid-template-columns: 1fr;
+    display: flex;
+    gap: 10px;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-inline: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .gallery-strip::-webkit-scrollbar {
+    display: none;
   }
 
   .gallery-strip button {
-    height: 88px;
+    flex: 0 0 74%;
+    height: 116px;
+    scroll-snap-align: start;
   }
 
   .gallery-view img {
-    height: 380px;
+    height: 320px;
+  }
+
+  .gallery-view p {
+    font-size: 0.92rem;
+  }
+
+  .amenity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    padding-bottom: 96px;
+  }
+
+  .mobile-whatsapp {
+    display: flex;
   }
 }

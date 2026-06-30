@@ -1,0 +1,17 @@
+{
+  "name": "edencampestre",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "script.js",
+  "scripts": {
+    "optimize:images": "node scripts/optimize-images.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sharp": "^0.35.2"
+  }
+}

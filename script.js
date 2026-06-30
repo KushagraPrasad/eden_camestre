@@ -3,6 +3,7 @@ const menuToggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
 const galleryMain = document.querySelector("[data-gallery-main]");
 const galleryView = galleryMain?.closest(".gallery-view");
+const galleryCaption = document.querySelector("[data-gallery-caption]");
 const galleryButtons = document.querySelectorAll("[data-gallery-src]");
 const contactForm = document.querySelector("[data-contact-form]");
 
@@ -31,6 +32,9 @@ galleryButtons.forEach((button) => {
     button.classList.add("active");
     galleryMain.src = button.dataset.gallerySrc;
     galleryMain.alt = button.dataset.galleryAlt || "";
+    if (galleryCaption) {
+      galleryCaption.textContent = button.dataset.galleryCaption || "";
+    }
     galleryView?.classList.toggle("is-contain", button.dataset.galleryFit === "contain");
     galleryView?.classList.toggle("is-cover", button.dataset.galleryFit !== "contain");
   });
