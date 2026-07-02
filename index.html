@@ -7,7 +7,7 @@
   <title>Edén Campestre | Lotes exclusivos en Quintana Roo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700;1,9..144,900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/webp/eden-icon.webp">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -29,33 +29,61 @@
   </header>
 
   <main id="inicio">
+    <!-- ═══ HERO ═══ -->
     <section class="hero">
       <div class="hero-media" aria-hidden="true">
         <img src="assets/webp/aerial-view.webp" alt="">
       </div>
+      <div class="hero-grain" aria-hidden="true"></div>
       <div class="hero-content">
         <p class="eyebrow">Lotes exclusivos en Quintana Roo</p>
-        <h1>Edén Campestre</h1>
-        <p class="hero-copy">Terrenos campestres desde $3,000 MXN mensuales, con 10% de enganche y financiamiento directo de hasta 60 meses sin intereses.</p>
+        <h1>Edén<br><em>Campestre</em></h1>
+        <p class="hero-copy">Terrenos campestres desde <strong>$3,000 MXN</strong> mensuales, con 10% de enganche y financiamiento directo de hasta 60 meses sin intereses.</p>
         <div class="hero-actions">
           <a class="button primary" href="#contacto">Recibir información</a>
           <a class="button secondary" href="#lotes">Ver lotes</a>
         </div>
       </div>
       <div class="hero-panel" aria-label="Datos clave">
-        <div><strong>10%</strong><span>enganche</span></div>
-        <div><strong>60</strong><span>meses sin intereses</span></div>
-        <div><strong>$3,000</strong><span>mensualidades desde</span></div>
+        <div>
+          <strong data-count-to="10" data-suffix="%">0%</strong>
+          <span>enganche</span>
+        </div>
+        <div>
+          <strong data-count-to="60">0</strong>
+          <span>meses sin intereses</span>
+        </div>
+        <div>
+          <strong data-count-prefix="$" data-count-to="3000" data-count-separator>0</strong>
+          <span>mensualidades desde</span>
+        </div>
       </div>
     </section>
 
+    <!-- ═══ TRUST BAR ═══ -->
+    <div class="trust-bar">
+      <div class="trust-bar__track">
+        <div class="trust-bar__items">
+          <span>10% de enganche</span>
+          <span>Financiamiento directo</span>
+          <span>Hasta 60 meses sin intereses</span>
+          <span>Desde $3,000 MXN mensuales</span>
+          <span>10% de enganche</span>
+          <span>Financiamiento directo</span>
+          <span>Hasta 60 meses sin intereses</span>
+          <span>Desde $3,000 MXN mensuales</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ INTRO / DATOS CLAVE ═══ -->
     <section class="intro band">
       <div class="section-heading">
         <p class="eyebrow">Datos clave</p>
-        <h2>Lo esencial para evaluar Edén Campestre desde el primer vistazo.</h2>
+        <h2>Lo esencial para evaluar <em>Edén Campestre</em> desde el primer vistazo.</h2>
       </div>
       <div class="intro-grid">
-        <article>
+        <article class="intro-grid__featured">
           <span>01</span>
           <h3>Ubicación estratégica</h3>
           <p>Traslados ágiles hacia Cancún y Playa del Carmen, con la Ruta de los Cenotes prácticamente en el patio trasero.</p>
@@ -73,13 +101,14 @@
       </div>
     </section>
 
+    <!-- ═══ UBICACIÓN ═══ -->
     <section id="ubicacion" class="split-section">
       <div class="media-frame">
         <img src="assets/webp/location-map.webp" alt="Mapa de cercanía de Edén Campestre" loading="lazy" decoding="async">
       </div>
       <div class="section-copy">
         <p class="eyebrow">Ubicación estratégica</p>
-        <h2>Cerca de Cancún, Playa del Carmen y la Ruta de los Cenotes.</h2>
+        <h2>Cerca de Cancún, Playa del Carmen y la <em>Ruta de los Cenotes.</em></h2>
         <p>Su ubicación permite un traslado rápido y sin el estrés del tráfico hacia Cancún y Playa del Carmen. Además, la Ruta de los Cenotes queda muy cerca, convirtiendo cada día en una oportunidad para escapar de la rutina.</p>
         <ul class="check-list">
           <li>Cerca de polos turísticos y servicios clave.</li>
@@ -89,10 +118,11 @@
       </div>
     </section>
 
+    <!-- ═══ LOTES ═══ -->
     <section id="lotes" class="lots band">
       <div class="section-heading">
         <p class="eyebrow">Lotes y financiamiento</p>
-        <h2>Lotes amplios con financiamiento directo hasta 60 meses.</h2>
+        <h2>Lotes amplios con financiamiento directo hasta <em>60 meses.</em></h2>
         <p>Pensando en tu futuro, Edén Campestre plantea un esquema flexible para iniciar con claridad y crecer sin presión.</p>
       </div>
       <div class="lots-layout">
@@ -113,12 +143,14 @@
       </div>
     </section>
 
+    <!-- ═══ AMENIDADES ═══ -->
     <section id="amenidades" class="amenities">
+      <div class="amenities__grain" aria-hidden="true"></div>
       <div class="amenity-hero">
         <img src="assets/webp/amenities-hero.webp" alt="Amenidades naturales de Edén Campestre" loading="lazy" decoding="async">
         <div>
           <p class="eyebrow">Amenidades exclusivas</p>
-          <h2>Todo lo que necesitas para una vida en total equilibrio.</h2>
+          <h2>Todo lo que necesitas para una vida en <em>total equilibrio.</em></h2>
         </div>
       </div>
       <div class="amenity-grid">
@@ -149,10 +181,11 @@
       </div>
     </section>
 
+    <!-- ═══ GALERÍA ═══ -->
     <section class="gallery band" aria-labelledby="galeria-titulo">
       <div class="section-heading">
         <p class="eyebrow">Galería</p>
-        <h2 id="galeria-titulo">Visualiza el entorno antes de dar el siguiente paso.</h2>
+        <h2 id="galeria-titulo">Visualiza el entorno antes de dar el <em>siguiente paso.</em></h2>
       </div>
       <div class="gallery-view is-cover">
         <img src="assets/webp/aerial-view.webp" alt="Vista aérea de Edén Campestre" loading="lazy" decoding="async" data-gallery-main>
@@ -166,10 +199,11 @@
       </div>
     </section>
 
+    <!-- ═══ MAPA ═══ -->
     <section class="map-section">
       <div class="section-copy">
         <p class="eyebrow">Mapa</p>
-        <h2>Encuentra Edén Campestre en Quintana Roo.</h2>
+        <h2>Encuentra Edén Campestre en <em>Quintana Roo.</em></h2>
         <p>Explora la ubicación directamente en Google Maps y envíanos un mensaje para recibir más información.</p>
       </div>
       <div class="map-frame">
@@ -177,43 +211,45 @@
       </div>
     </section>
 
+    <!-- ═══ FAQ ═══ -->
     <section class="faq band" aria-labelledby="faq-titulo">
       <div class="section-heading">
         <p class="eyebrow">Preguntas frecuentes</p>
-        <h2 id="faq-titulo">Respuestas rápidas con la información disponible.</h2>
+        <h2 id="faq-titulo">Respuestas rápidas con la información <em>disponible.</em></h2>
       </div>
-      <div class="faq-grid">
-        <article class="faq-item">
-          <h3>¿Dónde se ubica Edén Campestre?</h3>
+      <div class="faq-accordion">
+        <details class="faq-item" open>
+          <summary><span>¿Dónde se ubica Edén Campestre?</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
           <p>En Quintana Roo, con conexión hacia Cancún, Playa del Carmen y la Ruta de los Cenotes.</p>
-        </article>
-        <article class="faq-item">
-          <h3>¿Qué medidas tienen los terrenos?</h3>
+        </details>
+        <details class="faq-item">
+          <summary><span>¿Qué medidas tienen los terrenos?</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
           <p>Hay terrenos de 40 x 20 y 40 x 40 metros.</p>
-        </article>
-        <article class="faq-item">
-          <h3>¿Hay financiamiento directo?</h3>
+        </details>
+        <details class="faq-item">
+          <summary><span>¿Hay financiamiento directo?</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
           <p>Sí. El esquema contempla hasta 60 meses sin intereses.</p>
-        </article>
-        <article class="faq-item">
-          <h3>¿Con cuánto puedo apartar?</h3>
+        </details>
+        <details class="faq-item">
+          <summary><span>¿Con cuánto puedo apartar?</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
           <p>Puedes apartar tu terreno con 10% de enganche.</p>
-        </article>
-        <article class="faq-item">
-          <h3>¿Desde cuánto son las mensualidades?</h3>
+        </details>
+        <details class="faq-item">
+          <summary><span>¿Desde cuánto son las mensualidades?</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
           <p>Las mensualidades mínimas empiezan desde $3,000 MXN.</p>
-        </article>
-        <article class="faq-item">
-          <h3>¿Qué amenidades incluye?</h3>
+        </details>
+        <details class="faq-item">
+          <summary><span>¿Qué amenidades incluye?</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
           <p>Áreas verdes, pista de atletismo, parque recreativo y acceso controlado.</p>
-        </article>
+        </details>
       </div>
     </section>
 
+    <!-- ═══ CONTACTO ═══ -->
     <section id="contacto" class="contact band">
       <div class="contact-copy">
         <p class="eyebrow">Contáctanos</p>
-        <h2>Estamos a un mensaje de distancia para resolver todas tus dudas.</h2>
+        <h2>Estamos a un mensaje de distancia para resolver todas tus <em>dudas.</em></h2>
         <p>Nos emociona conectar contigo y ayudarte a encontrar el terreno ideal para tu futuro.</p>
         <div class="contact-links">
           <a href="tel:+529845811387">984 581 1387</a>
@@ -246,13 +282,28 @@
   </main>
 
   <footer class="site-footer">
-    <img src="assets/webp/eden-icon.webp" alt="Edén Campestre">
-    <p>Edén Campestre, lotes exclusivos en el Caribe Mexicano.</p>
-    <div>
-      <a href="https://wa.me/529845811387" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="https://www.facebook.com/profile.php?id=61588776539650" target="_blank" rel="noopener">Facebook</a>
+    <div class="footer-top">
+      <img src="assets/webp/eden-icon.webp" alt="Edén Campestre">
+      <p>Edén Campestre, lotes exclusivos en el Caribe Mexicano.</p>
+      <div class="footer-social">
+        <a href="https://wa.me/529845811387" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
+          WhatsApp
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61588776539650" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
+          Facebook
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>© 2026 Edén Campestre. Todos los derechos reservados.</small>
     </div>
   </footer>
+
+  <button class="back-to-top" aria-label="Volver arriba" data-back-to-top>
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M15 12.5L10 7.5L5 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 
   <a class="mobile-whatsapp" href="https://wa.me/529845811387?text=Hola,%20vi%20la%20p%C3%A1gina%20de%20Ed%C3%A9n%20Campestre%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
     <svg width="26" height="26" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
