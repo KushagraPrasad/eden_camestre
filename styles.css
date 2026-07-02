@@ -134,6 +134,35 @@ a {
   display: none;
 }
 
+.reveal {
+  --reveal-delay: 0ms;
+}
+
+.reveal.is-reveal-ready {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 620ms ease, transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal.is-reveal-ready {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 .hero {
   position: relative;
   display: grid;
@@ -563,6 +592,34 @@ section {
   min-height: 520px;
 }
 
+.faq {
+  background: var(--paper);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.faq-item {
+  padding: clamp(22px, 3vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.faq-item h3 {
+  color: var(--forest);
+  font-size: 1.35rem;
+  line-height: 1.08;
+}
+
+.faq-item p {
+  margin: 14px 0 0;
+  color: var(--muted);
+}
+
 .contact {
   display: grid;
   grid-template-columns: minmax(300px, 0.9fr) minmax(320px, 0.85fr);
@@ -687,6 +744,10 @@ section {
   flex-shrink: 0;
 }
 
+.mobile-action-bar {
+  display: none;
+}
+
 @media (max-width: 980px) {
   .site-header {
     grid-template-columns: auto auto;
@@ -780,6 +841,7 @@ section {
   .amenity-grid,
   .split-section,
   .map-section,
+  .faq-grid,
   .contact {
     grid-template-columns: 1fr;
   }
@@ -800,19 +862,38 @@ section {
 
 @media (max-width: 640px) {
 
+  .site-header {
+    padding: 12px 18px;
+  }
+
   .hero {
     min-height: auto;
-    padding-top: 132px;
-    padding-bottom: 38px;
-    gap: 32px;
+    padding: 118px 24px 34px;
+    gap: 26px;
+  }
+
+  .hero::after {
+    background:
+      linear-gradient(180deg, rgba(251, 250, 245, 0.04) 0, rgba(10, 26, 18, 0.7) 18%, rgba(10, 26, 18, 0.46) 50%, rgba(10, 26, 18, 0.9) 100%),
+      linear-gradient(90deg, rgba(10, 26, 18, 0.78), rgba(10, 26, 18, 0.22));
+  }
+
+  .hero-content {
+    align-self: start;
+  }
+
+  .hero-content .eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.7rem;
   }
 
   .brand {
-    width: 96px;
+    width: 86px;
+    height: 48px;
   }
 
   h1 {
-    font-size: clamp(3.25rem, 18vw, 4.85rem);
+    font-size: clamp(3rem, 16vw, 4.25rem);
   }
 
   h2 {
@@ -820,27 +901,43 @@ section {
   }
 
   .hero-copy {
-    font-size: 1rem;
+    max-width: 31rem;
+    margin-top: 14px;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    text-wrap: pretty;
+  }
+
+  .hero-actions {
+    gap: 12px;
+    margin-top: 26px;
+  }
+
+  .hero-actions .button {
+    min-height: 46px;
+    padding: 13px 18px;
   }
 
   .hero-panel {
-    border-radius: var(--radius);
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    background: rgba(18, 42, 29, 0.68);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.2);
     overflow: hidden;
   }
 
   .hero-panel div {
     min-height: auto;
-    padding: 20px 24px;
+    padding: 17px 22px;
   }
 
   .hero-panel strong {
-    font-size: 2.5rem;
+    font-size: 2.35rem;
   }
 
   .hero-panel span {
-    margin-top: 4px;
-    font-size: 0.88rem;
+    margin-top: 3px;
+    font-size: 0.84rem;
   }
 
   .hero-actions,
@@ -890,6 +987,38 @@ section {
   }
 
   .mobile-whatsapp {
-    display: flex;
+    display: none;
+  }
+
+  .mobile-action-bar {
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+    z-index: 30;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 999px;
+    background: rgba(251, 250, 245, 0.92);
+    box-shadow: 0 18px 44px rgba(16, 42, 29, 0.24);
+    backdrop-filter: blur(16px);
+  }
+
+  .mobile-action-bar a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    color: var(--forest);
+    font-weight: 900;
+  }
+
+  .mobile-action-bar a:last-child {
+    background: var(--sun);
+    color: #1d251a;
   }
 }
